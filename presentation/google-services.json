@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "755164286327",
+    "firebase_url": "https://notsimplechat-5a970.firebaseio.com",
+    "project_id": "notsimplechat-5a970",
+    "storage_bucket": "notsimplechat-5a970.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755164286327:android:1ba6b81e69e9371a",
+        "android_client_info": {
+          "package_name": "com.garr.pavelbobrovko.notsimplechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755164286327-1440r6gicukv5akmtm7poah06t257tks.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.garr.pavelbobrovko.notsimplechat",
+            "certificate_hash": "021b0b9fc4bb0ca066537c4503c4977065604b06"
+          }
+        },
+        {
+          "client_id": "755164286327-bm87thqo4landmur7l5hfhek0ctvuli7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.garr.pavelbobrovko.notsimplechat",
+            "certificate_hash": "55fbafdd0d70b5ca8ba4308045c57b6aac31d9dc"
+          }
+        },
+        {
+          "client_id": "755164286327-vkv4gvp1so83kv2sntf2vsmsj3p8rdic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.garr.pavelbobrovko.notsimplechat",
+            "certificate_hash": "23a313c76cd0cb0433936d53d672b46d919a00b1"
+          }
+        },
+        {
+          "client_id": "755164286327-81if9rne3e8b2qe79i6li64p1halneat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmt8MzWrYugZ58XgbFDT9v9zXjhuKy17M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755164286327-81if9rne3e8b2qe79i6li64p1halneat.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

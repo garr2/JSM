@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.garr.pavelbobrovko.notsimplechat.presentation.screen.main.MainActivity">
+    <item
+        android:id="@+id/action_sign_in"
+        android:title="Войти"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_notifications"
+        android:title="Notifications"
+        android:checkable="true"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_notifications_sound"
+        android:title="Notification sound"
+        android:checkable="true"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_sign_out"
+        android:title="SignOut"
+        app:showAsAction="never"/>
+
+</menu>

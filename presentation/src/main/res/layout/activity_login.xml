@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="view_model"
+            type="com.garr.pavelbobrovko.notsimplechat.presentation.screen.login.LoginViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_your_email"
+            app:layout_constraintBottom_toTopOf="@+id/etMail"
+            app:layout_constraintStart_toStartOf="@+id/etMail" />
+
+        <EditText
+            android:id="@+id/etMail"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@={view_model.etEmail}"
+            android:layout_marginBottom="340dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/etPassword"
+            app:layout_constraintStart_toStartOf="@+id/etPassword" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_password"
+            app:layout_constraintBottom_toTopOf="@+id/etPassword"
+            app:layout_constraintStart_toStartOf="@+id/etPassword" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="214dp"
+            android:layout_height="0dp"
+            android:text="@={view_model.etPass}"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="232dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ibSignInGoogle"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="@+id/ibSignInGoogle" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:text="@string/or_sign_in_by"
+            app:layout_constraintBottom_toBottomOf="@+id/ibSignInGoogle"
+            app:layout_constraintEnd_toStartOf="@+id/ibSignInGoogle"
+            app:layout_constraintTop_toTopOf="@+id/ibSignInGoogle" />
+
+        <ImageButton
+            android:id="@+id/ibSignInGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v) -> view_model.onGoogleButtonClick()}"
+            android:layout_marginBottom="148dp"
+            android:layout_marginEnd="8dp"
+            android:background="#00ffffff"
+            android:src="@drawable/ic_google_sign_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:onClick="@{(v) -> view_model.onOkButtonClick()}"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="60dp"
+            android:text="@string/ok"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnCancel"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:onClick="@{(v) -> view_model.onCancelButtonClick()}"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50121653" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{view_model.errorEmail}"
+            android:visibility="@{view_model.errorEmailVisibility}"
+            app:layout_constraintStart_toStartOf="@+id/etMail"
+            app:layout_constraintTop_toBottomOf="@+id/etMail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{view_model.errorPass}"
+            android:visibility="@{view_model.errorPassVisibility}"
+            app:layout_constraintStart_toStartOf="@+id/etPassword"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</layout>

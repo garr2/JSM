@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.screen.userSettings.UserSettingsActivity">
+
+    <data>
+        <variable
+            name="view_model"
+            type="com.garr.pavelbobrovko.notsimplechat.presentation.screen.userSettings.UserSettingsViewModel"/>
+    </data>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivEditAvatar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            app:src="@{view_model.ivPhoto}"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/ibGallery"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#00ffffff"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_gallery_black"
+            android:visibility="visible"
+            android:onClick="@{(v) -> view_model.onClickGalery()}"
+            app:layout_constraintBottom_toBottomOf="@+id/ivEditAvatar"
+            app:layout_constraintStart_toStartOf="@+id/ivEditAvatar" />
+
+
+        <ImageButton
+            android:id="@+id/ibCamera"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#00ffffff"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_camera_alt_black"
+            android:visibility="visible"
+            android:onClick="@{(v) -> view_model.onClickCamera()}"
+            app:layout_constraintBottom_toBottomOf="@+id/ivEditAvatar"
+            app:layout_constraintEnd_toEndOf="@+id/ivEditAvatar" />
+
+        <EditText
+            android:id="@+id/etEditName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/enter_your_name"
+            android:inputType="textPersonName"
+            android:text="@={view_model.etName}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+        <EditText
+            android:id="@+id/etAboutUser"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:gravity="top|left"
+            android:hint="@string/write_few_words_about_yourself"
+            android:inputType="textPersonName"
+            android:text="@={view_model.etAbout}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEditName"
+            app:layout_constraintVertical_bias="0.951" />
+
+        <TextView
+            android:id="@+id/tvNameError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_field"
+            android:textColor="#ff0000"
+            app:visibility="@{view_model.isNameValid}"
+            app:layout_constraintBottom_toTopOf="@+id/etEditName"
+            app:layout_constraintStart_toStartOf="@+id/etEditName" />
+
+        <ImageButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/save"
+            android:onClick="@{(v) -> view_model.onClickSave()}"
+            app:layout_constraintEnd_toStartOf="@+id/btnCancel"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/cancel"
+            android:onClick="@{(v) -> view_model.onClickCancel()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSave"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">JSM</string>
+    <string name="ok">Ok</string>
+    <string name="save">Save</string>
+    <string name="enter_your_email">Enter your email:</string>
+    <string name="enter_password">Enter password:</string>
+    <string name="cancel">Cancel</string>
+    <string name="write_few_words_about_yourself">Write few words about yourself</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="or_sign_in_by">Or sign in by:</string>
+    <string name="empty_field">This field can\'t be empty!</string>
+    <string name="illegal_name">The user name can\'t be "null"!</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    //FIXME Перенести в NDK
+    <string name="debug_client_id">755164286327-bm87thqo4landmur7l5hfhek0ctvuli7.apps.googleusercontent.com</string>
+</resources>

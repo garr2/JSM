@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llChatItem"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            app:cardCornerRadius="25dp"
+            android:layout_centerHorizontal="true"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            android:id="@+id/cvCircleView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/ivAvatar"
+
+            android:src="@drawable/image"/>
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/vAvatarListener"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTime"
+            android:text="1:00"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="personal name"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cvCircleView"
+            android:layout_toEndOf="@+id/cvCircleView"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llMultimediaLayout"
+        android:orientation="vertical"/>
+
+
+</LinearLayout>
